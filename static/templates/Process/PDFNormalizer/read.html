@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block content%}
+
+{%if error%}
+    <a href="{%url 'RemoveBrokenBook'%}">
+        cancel
+    </a>
+{%endif%}
+
+{%if completed%}
+    <a href="{%url 'RemoveBrokenBook'%}" class="btn btn-primary">
+        Cancel
+    </a>
+    <a href="{%url 'UploadBrokenBook'%}" class="btn btn-primary">
+        Prev
+    </a>
+    <a href="{%url 'GenerateToCBook'}" class="btn btn-primary">
+        Next
+    </a>
+
+{%else%}
+    The document you entered is password protected
+    <form action="" method="post">
+        {%csrf_token%}
+        <input type="text" readonly=True name="process" value='decrypt'>
+        <label for="password">Password :</label>
+        <input type="text" name="password">
+        <input type="submit" value="submit">
+    </form>
+{%endif%}
+
+{%endblock%}
+
+
+

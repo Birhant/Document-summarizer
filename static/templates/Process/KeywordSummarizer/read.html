@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block content%}
+
+{%if error%}
+    <a href="{%url 'RemoveMultipleBook'%}">
+        cancel
+    </a>
+{%endif%}
+
+{%if completed%}
+    <a href="{%url 'RemoveMultipleBook'%}" class="btn btn-primary">
+        Cancel
+    </a>
+    <a href="{%url 'UploadMultipleBook'%}" class="btn btn-primary">
+        Prev
+    </a>
+    <a href="{%url 'SummarizeMultipleBook'%}" class="btn btn-primary">
+        Next
+    </a>
+{%else%}
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">
+        Search
+    </button>
+</form>
+{%endif%}
+{%endblock%}
+
+
+

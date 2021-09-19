@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<style>
+.my-custom-scrollbar {
+position: relative;
+height: 200px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+background-color: rgba(0, 0, 139, 0.315);
+}
+</style>
+
+
+{%if error%}
+    <a href="{%url 'ReadSingleBook'%}" class="btn btn-primary">
+        Prev
+    </a>
+    <a href="{%url 'RemoveSingleBook'%}" class="btn btn-primary">
+        cancel
+    </a>
+
+{%elif completed%}
+    current titles
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-bordered table-striped mb-0">
+            {%for heading in headings%}
+            <tr>
+                <td>{{heading.0}}</td>
+                <td>{{heading.1}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+
+    <a href="{%url 'RemoveSingleBook'%}" class="btn btn-primary">
+        Cancel
+    </a>
+    <a href="{%url 'ExtractSingleBook'% password=''}" class="btn btn-primary">
+        Prev
+    </a>
+    <a href="{%url 'SummarizeSingleBook'%}" class="btn btn-primary">
+        Next
+    </a>
+{%endif%}
+
+{%endblock content%}

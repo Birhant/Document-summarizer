@@ -1,0 +1,34 @@
+{% load static%}
+<style>
+    .page-footer{
+        background-color:rgb(116, 179, 108);
+        position: relative;
+        width : 100%;
+        bottom: 0;
+    }
+</style>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Document summarizer</h5>
+                <p class="grey-text text-lighten-4">We are dedicated to provide you with best tools to get any information.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="http://facebook.com">Facebook</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://linkedin.com">Linkedin</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://google.com">Google</a></li>
+                    <li><a class="grey-text text-lighten-3" href="http://instagram.com">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container"> © 2021 Copyright ASTU PROJECT <a class="grey-text text-lighten-4 right" href="#!">Thanks for using our system from developers.</a> </div>
+    </div>
+</footer>

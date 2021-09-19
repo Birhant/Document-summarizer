@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" ,type="text/css">
+        <script src="{%static 'js/bootstrap.min.js'%}"></script>
+        <script src="{%static 'jquery/jquery.min.js'%}"></script>
+        {%load crispy_forms_tags%}
+        {%include 'nav.html'%}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {%if messages%}
+                        {%for message in messages%}
+                            <div class="alert alert-{{message.tags}}">
+                                {{ message }}
+                            </div>
+                        {%endfor%}
+                    {%endif%}
+                    {%block content%}
+                    {%endblock content%}
+                </div>
+                <div class="col-md-4">
+                    {%include 'sites.html'%}
+                </div>
+
+            </div>
+            {%include 'algorithms.html'%}
+
+        </div>
+    </body>
+    <footer>
+        {%include 'footer.html'%}
+    </footer>
+</html>

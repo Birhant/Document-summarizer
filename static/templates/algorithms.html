@@ -1,0 +1,52 @@
+<br>
+<div class="container" style="background-color: rgb(209, 216, 113);">
+    <h4>
+        Summarizer algorithms description
+    </h4>
+    <ul>
+        <li>
+            <b>Frequency based summarization</b>    - filters sentences with most frequent word in the entire document. <br>
+        </li>
+        <li>
+            <b>LexRank summarizer </b>- scores sentence based on their similarity to many other sentences using unsupervised graph based method.<br>
+        </li>
+        <li>
+            <b>TextRank</b> is an algorithm used to create graph representing the sentence and nodes to find important score of each sentences.<br>
+        </li>
+        <li>
+            <b>PageRank</b> works by counting the number and quality of links to a page to determine a rough estimate of how important the website is. The underlying assumption is that more important websites are likely to receive more links from other websites.
+        </li>
+        <li>
+            PageRank is for webpage ranking, and TextRank is for text ranking. The webpage in PageRank is the text in TextRank, so the basic idea is the same.<br>
+        </li>
+        <li>
+            <b>TF-IDF (term frequency-inverse document frequency)</b> increasing proportionally to the number of times a word appears in a document, but is offset by the number of documents that contain the word.<br>
+        </li>
+        <li>
+            <b>Luhn</b> states that this is first done by doing a frequency analysis, then finding words which are significant using heuristic method, but not unimportant English words.<br>
+        </li>
+        <li>
+            <b>LSA (Latent Sumantic Analysis)</b> analyzing relationships between a set of documents and the terms they contain by producing a set of concepts related to the documents and terms.<br>
+        </li>
+        <li>
+            <b>Frequency matrix</b> differs by converting words to matrix to analyze them even further.
+        </li>
+    </ul>
+
+</div>
+<div class="container" style="background-color: rgb(187, 113, 216);">
+    <h4>
+        Reasons we dropped abstractive summarization
+    </h4>
+    <b>
+        Training accurate models takes from 8 hours to 8 weeks depending on the required accuracy of model and given hardware.
+        Mostly it is prefereble to use GPU (Graphical Processing Unit) in order to train faster.
+        Training is often done by cloud computing like amazon renting CPU, memory space and GPU.    
+    </b>
+    <br>
+    The process of training an ML model involves providing an ML algorithm (that is, the learning algorithm) with training data to learn from. 
+    The term ML model refers to the model artifact that is created by the training process.
+    The training data must contain the correct answer, which is known as a target or target attribute. The learning algorithm finds patterns in the training data that map the input data attributes to the target (the answer that you want to predict), and it outputs an ML model that captures these patterns.
+    You can use the ML model to get predictions on new data for which you do not know the target. For example, let's say that you want to train an ML model to predict if an email is spam or not spam. You would provide Amazon ML with training data that contains emails for which you know the target (that is, a label that tells whether an email is spam or not spam). Amazon ML would train an ML model by using this data, resulting in a model that attempts to predict whether new email will be spam or not spam.
+</div>
+<br>
