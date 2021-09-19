@@ -1,2 +1,3 @@
 # Document-summarizer
-## Django text summarizer project
+## Django text summarization project
+supported formats .pdf, .epub, .xml
